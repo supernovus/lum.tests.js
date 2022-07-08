@@ -1,6 +1,6 @@
 const def = require('./inc/dies.js');
 
-const {dies,output} = require('../index').functional({module, plan: def.plan});
+const {dies,output} = require('../lib').functional({module, plan: def.plan});
 
 for (const dt of def.diesErrors)
 {

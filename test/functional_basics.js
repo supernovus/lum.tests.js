@@ -1,6 +1,6 @@
 // Testing the basic functions of the functional testing API.
 
-const {test,plan,ok,pass,is,isnt,cmp,tap} = require('../index').functional();
+const {test,plan,ok,pass,is,isnt,cmp,tap} = require('../lib').functional();
 const def = require('./inc/basics.js');
 
 plan(def.plan);

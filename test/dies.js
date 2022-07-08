@@ -1,6 +1,6 @@
 const def = require('./inc/dies.js');
 // Using the 'new()' function.
-const test = require('../index').new({module, plan: def.plan});
+const test = require('../lib').new({module, plan: def.plan});
 
 for (const dt of def.diesErrors)
 {

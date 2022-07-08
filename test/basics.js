@@ -1,4 +1,4 @@
-const Test = require('../index').Test;
+const Test = require('../lib').Test;
 const def = require('./inc/basics.js');
 
 const test = new Test();
