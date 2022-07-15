@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2022-07-15
+### Fixed
+- Dependency issue in `package.json` with pre-release parent.
+### Added
+- A temporary `npm test` script using the `prove` utility from Perl 5.
+
 ## [1.1.0] - 2022-07-08
 ### Fixed
 - Changelog had wrong URLs.
@@ -26,7 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/supernovus/lum.tests.js/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/supernovus/lum.tests.js/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/supernovus/lum.tests.js/releases/tag/v1.0.0
 
