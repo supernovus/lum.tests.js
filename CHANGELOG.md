@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2022-07-26
+### Added
+- `lives()` method; the inverse of `dies()`.
+- `nota()` method; the inverse of `isa()`.
+- `isntJSON()` method; the inverse of `isJSON()`.
+- Tests for `isa()`, `isJSON()`, and all the new methods.
+### Changed
+- `isa()` uses `core.types.isa()` method now.
+- `isa()` supports multiple `wants` values, just use an Array.
+- Anything that used `JSON.stringify()` now uses `core.types.stringify()`.
+
 ## [1.1.1] - 2022-07-15
 ### Fixed
 - Dependency issue in `package.json` with pre-release parent.
@@ -32,7 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/supernovus/lum.tests.js/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/supernovus/lum.tests.js/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/supernovus/lum.tests.js/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/supernovus/lum.tests.js/releases/tag/v1.0.0

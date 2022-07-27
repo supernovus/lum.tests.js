@@ -1,4 +1,5 @@
 // Common stuff for both regular and functional tests.
+const types = require('@lumjs/core').types;
 
 const okay = (1==1);
 
@@ -33,10 +34,39 @@ const cmpTests =
   // TODO: finish this set of tests.
 ];
 
+const livesTests = 
+[ // Tests for the lives() function.
+  () => true,
+  () => JSON.stringify({answer:42}),
+  () => JSON.parse('{"hello":"world"}'),
+];
+
+const isJsonTests = 
+[
+  [[1,2,3], [1,2,3]],
+  [['hello','world'], ['hello','world']],
+  [{hello: 'world'}, {hello:'world'}],
+];
+
+const isntJsonTests = 
+[
+  [[1,2,3], [3,2,1]],
+  [['hello','world'], ['goodbye','universe']],
+  [{hello: 'world'}, {hello:'darkness my old friend'}],
+];
+
 const plan 
   = 2
   + isTests.length
   + isntTests.length
-  + cmpTests.length;
+  + cmpTests.length
+  + livesTests.length
+  + isJsonTests.length
+  + isntJsonTests.length
+  ;
 
-module.exports = {okay, isTests, isntTests, cmpTests, plan};
+module.exports = 
+{
+  isTests, isntTests, cmpTests, livesTests, isJsonTests, isntJsonTests,
+  okay, plan, types,
+};
