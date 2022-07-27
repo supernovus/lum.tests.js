@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2022-07-27
+### Added
+- `$call()` function; powers `call()`, `lives()`, `dies()`, and `diesWith()`. 
+- `call()` method; test the result of a function call.
+- `diesWith()` method; like `dies()` but also tests the thrown `Error`.
+- `run()` method; for running a bunch of similar tests with a compact syntax.
+### Changed
+- How `functional` gets its list of test methods to proxy.
+- Cleaned up a bunch of stuff in the `Log` class.
+- Added a `details.info` structure to the `Log` class.
+- Refactored `lives()` and `dies()` to use the new `$call()` function.
+- Updated `ok()` to support passing `details` to it directly.
+- Some further cleanups in the `Test` class.
+
 ## [1.2.0] - 2022-07-26
 ### Added
 - `lives()` method; the inverse of `dies()`.
@@ -43,7 +57,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/supernovus/lum.tests.js/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/supernovus/lum.tests.js/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/supernovus/lum.tests.js/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/supernovus/lum.tests.js/compare/v1.0.0...v1.1.0
