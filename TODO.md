@@ -3,6 +3,8 @@
 - Write tests for:
   - `call()`
   - `diesWith()`
+  - `callIs()`
+  - `matches()`
   - `run()`
 - Write the `Harness` class, based of the Lum.php version.
 - Add tests for `Harness`.

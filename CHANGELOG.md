@@ -5,6 +5,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.4.0] - 2022-07-29
+## Added
+- Explicit `exports` section in `package.json` file.
+- Added `test.done()` method to be used instead of `test.output()`.
+- Added ability to configure the stringify depth.
+- Added ability to detect if the script was ran directly.
+- Added ability to check for a top-level `Harness` instance.
+- Added four new *binary flag* comparitor tests to `cmp()` method.
+- Added `not` alias for `!==` comparitor.
+- Added `matches` method for using a regular expression to match a string.
+- Added `callIs()` method that is like `call()` but takes a desired value and passes the function return value to `cmp()`, `isa()`, or other test methods.
+- A new `test.ran` computed property.
+
+## Changed
+- Enhanced a lot of docblocks.
+- Updated anything using `types.stringify()` to support the depth setting.
+- Updated `run()` so it can use either `call()` or `callIs()` as the underlying test method when using a custom `function` test.
+
 ### Added
 - Configuration for JSDoc.
 - A few module-level *docblocks*.
@@ -63,7 +82,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/supernovus/lum.tests.js/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/supernovus/lum.tests.js/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/supernovus/lum.tests.js/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/supernovus/lum.tests.js/compare/v1.1.0...v1.1.1
