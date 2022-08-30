@@ -6,8 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2022-08-30
+### Added
+- Sample `data` used in some of the old tests.
+### Fixed
+- Mistakes in the changelog. 
+
 ## [1.4.0] - 2022-07-29
-## Added
+### Added
+- Configuration for JSDoc.
+- A few module-level *docblocks*.
 - Explicit `exports` section in `package.json` file.
 - Added `test.done()` method to be used instead of `test.output()`.
 - Added ability to configure the stringify depth.
@@ -19,17 +27,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `callIs()` method that is like `call()` but takes a desired value and passes the function return value to `cmp()`, `isa()`, or other test methods.
 - A new `test.ran` computed property.
 
-## Changed
-- Enhanced a lot of docblocks.
-- Updated anything using `types.stringify()` to support the depth setting.
-- Updated `run()` so it can use either `call()` or `callIs()` as the underlying test method when using a custom `function` test.
-
-### Added
-- Configuration for JSDoc.
-- A few module-level *docblocks*.
 ### Changed
 - Updated `@lumjs/core` dependency to `^1.0.0` (no more *beta* tags!)
 - Updated various *docblocks* for documentation.
+- Enhanced a lot of docblocks.
+- Updated anything using `types.stringify()` to support the depth setting.
+- Updated `run()` so it can use either `call()` or `callIs()` as the underlying test method when using a custom `function` test.
 
 ## [1.3.0] - 2022-07-27
 ### Added
@@ -82,7 +85,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/supernovus/lum.tests.js/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/supernovus/lum.tests.js/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/supernovus/lum.tests.js/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/supernovus/lum.tests.js/compare/v1.1.1...v1.2.0

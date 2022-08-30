@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/tests",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "main": "lib/index.js",
   "exports":
   {
@@ -8,7 +8,8 @@
     "./test": "./lib/test.js",
     "./functional": "./lib/functional.js",
     "./harness": "./lib/harness.js",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./data/*": "./test/data/*.js"
   },
   "license": "MIT",
   "repository":
