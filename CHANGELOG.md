@@ -6,6 +6,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.0] - 2022-09-12
+#### The *sub-classes* update
+### Added
+- `Test.new()` works like the `@lumjs/tests.new()`, but uses `this` so it's sub-classable.
+- `Test.static()`, calls `@lumjs/tests.functional()`, and passes `this` as the `testClass`.
+- `Test#TAP`, read-only accessor alias to `Test#tap()`.
+- `Test.$METHODS.$meta`, a list of properties to skip in `$METHODS.all` output.
+- `Test.$METHODS.extend()`, allow `Test` *sub-classes* to build upon the `$METHODS`
+  without changing the list in the original `Test` class.
+### Changed
+- Reworked a bunch of the DocBlocks to make the docs better.
+- Modified the `functional()` method to accept a `testClass` parameter.
+  This allows *sub-classes* to make their own functional APIs.
+- Changed `Log.tap()` to make the `details` structure more flexible.
+  The `wanted` property is now optional.
+- The `Test` class saves the test method list for `call()` into `this.$testMethods`
+  instead of using the `.$METHODS.test` directly.
+### Fixed
+- Added some missing functions to the registered list of test methods.
+
 ## [1.5.0] - 2022-08-30
 ### Added
 - Sample `data` used in some of the old tests.
@@ -85,7 +105,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/supernovus/lum.tests.js/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/supernovus/lum.tests.js/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/supernovus/lum.tests.js/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/supernovus/lum.tests.js/compare/v1.2.0...v1.3.0
