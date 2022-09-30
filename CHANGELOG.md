@@ -11,7 +11,7 @@ and a reference to a property of a module will be in `@tests.propName` format.
 
 ## [Unreleased]
 
-## [1.7.0] - 2022-09-27
+## [1.7.0] - 2022-09-29
 #### The *harness* update
 ### Added
 - Implemented `tests.Harness` library.
@@ -29,6 +29,7 @@ and a reference to a property of a module will be in `@tests.propName` format.
   - `log.js` → `test/log.js`
   - `functional.js` → `test/functional.js` 
   - `harness.js` → `harness/index.js`
+- Made the default module use *lazy-loading* for anything other than `tests.Test`.
 
 ## [1.6.0] - 2022-09-12
 #### The *sub-classes* update
@@ -128,7 +129,8 @@ and a reference to a property of a module will be in `@tests.propName` format.
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.6.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.7.0...HEAD
+[1.7.0]: https://github.com/supernovus/lum.tests.js/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/supernovus/lum.tests.js/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/supernovus/lum.tests.js/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/supernovus/lum.tests.js/compare/v1.3.0...v1.4.0
