@@ -1,9 +1,9 @@
-node_modules
-npm-debug.log
-.gulp-cache*
-package-lock.json
-docs
-src
-test
-bin/build-grammar.sh
+/node_modules
+/npm-debug.log
+/.gulp-cache*
+/package-lock.json
+/docs/*
+/src
+/test
+/bin/build-grammar.sh
 
