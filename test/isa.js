@@ -1,7 +1,7 @@
 const Test = require('../lib').Test;
 const def = require('./inc/isa.js');
 
-const test = new Test();
+const test = new Test({module});
 test.plan(def.plan);
 
 for (const isaTest of def.isaTests)
@@ -16,8 +16,4 @@ for (const notaTest of def.notaTests)
   test.nota(notaTest[0], notaTest[1], label);
 }
 
-// We're done, output the log.
-console.log(test.tap());
-
-// Re-expect the test.
-module.exports = test;
+test.done();

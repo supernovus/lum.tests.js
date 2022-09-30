@@ -6,7 +6,6 @@
   - `callIs()`
   - `matches()`
   - `run()`
-- Write the `Harness` class, based of the Lum.php version.
-- Add tests for `Harness`.
-- Create `lumtest` binary for running the harness without `prove` utility.
+- Test the `harness/parser` and associated `grammar/tap` libraries.
+- Test the *external* test mode in `Harness`.
 

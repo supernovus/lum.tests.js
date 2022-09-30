@@ -1,4 +1,4 @@
-const {test,plan,tap,isa,nota} = require('../lib').functional();
+const {plan,done,isa,nota} = require('../lib').functional({module});
 const def = require('./inc/isa.js');
 const getLabel = def.label;
 
@@ -16,8 +16,4 @@ for (const notaTest of def.notaTests)
   nota(notaTest[0], notaTest[1], label);
 }
 
-// We're done, output the log.
-console.log(tap());
-
-// And re-export the test.
-module.exports = test;
+done();

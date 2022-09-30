@@ -12,6 +12,6 @@ for (const dt of def.diesSyntaxErrors)
   test.dies(...dt);
 }
 
-// We're done, output the log.
-test.output();
+// We're done.
+test.done();
 

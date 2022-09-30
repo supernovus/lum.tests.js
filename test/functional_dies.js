@@ -1,6 +1,6 @@
 const def = require('./inc/dies.js');
 
-const {dies,output} = require('../lib').functional({module, plan: def.plan});
+const {dies,done} = require('../lib').functional({module, plan: def.plan});
 
 for (const dt of def.diesErrors)
 {
@@ -13,5 +13,5 @@ for (const dt of def.diesSyntaxErrors)
 }
 
 // We're done, output the log.
-output();
+done();
 

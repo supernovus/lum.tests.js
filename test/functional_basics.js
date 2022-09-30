@@ -2,8 +2,8 @@
 
 const 
 {
-  test,plan,ok,pass,is,isnt,cmp,tap,isJSON,isntJSON,lives,
-} = require('../lib').functional();
+  plan,ok,pass,is,isnt,cmp,done,isJSON,isntJSON,lives,
+} = require('../lib').functional({module});
 const def = require('./inc/basics.js');
 const stringify = def.types.stringify;
 
@@ -47,8 +47,5 @@ for (const [a,b] of def.isntJsonTests)
   isntJSON(a, b, msg);
 }
 
-// We're done, output the log.
-console.log(tap());
+done();
 
-// And re-export the test.
-module.exports = test;

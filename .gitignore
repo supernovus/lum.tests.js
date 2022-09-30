@@ -3,3 +3,5 @@
 /.gulp-cache*
 /package-lock.json
 /docs/api
+/lib/grammar/*.js
+

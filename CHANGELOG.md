@@ -4,7 +4,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+In this document, an identifier of `@tests` is not a real package name, but a 
+shorthand form for the real package name of `@lumjs/tests`.
+So a reference to an exported sub-module will be in `@tests/submodule` format,
+and a reference to a property of a module will be in `@tests.propName` format.
+
 ## [Unreleased]
+
+## [1.7.0] - 2022-09-27
+#### The *harness* update
+### Added
+- Implemented `tests.Harness` library.
+- Added a `Tap` grammar using the `peggy` library.
+- Added `.npmignore` file, separate from `.gitignore`.
+  - The grammar source is ignored by `npm`, but kept in `git`.
+  - The compiled grammar is ignored by `git`, but kept in `npm`. 
+- Added `bin/build-grammar.sh` developer-only helper.
+- Added `bin/lumtest.js` package CLI script.
+- Using `lumtest.js` instead of `prove` for `npm test` now.
+### Changed
+- Split `Test` class into `Stats` (test stats) and `Test` (actual testing methods.)
+- A bunch of restructuring of the internal files:
+  - `test.js` → `test/index.js`, `test/stats.js`
+  - `log.js` → `test/log.js`
+  - `functional.js` → `test/functional.js` 
+  - `harness.js` → `harness/index.js`
 
 ## [1.6.0] - 2022-09-12
 #### The *sub-classes* update
@@ -46,7 +70,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `matches` method for using a regular expression to match a string.
 - Added `callIs()` method that is like `call()` but takes a desired value and passes the function return value to `cmp()`, `isa()`, or other test methods.
 - A new `test.ran` computed property.
-
 ### Changed
 - Updated `@lumjs/core` dependency to `^1.0.0` (no more *beta* tags!)
 - Updated various *docblocks* for documentation.

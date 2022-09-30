@@ -2,7 +2,7 @@ const Test = require('../lib').Test;
 const def = require('./inc/basics.js');
 const stringify = def.types.stringify;
 
-const test = new Test();
+const test = new Test({module});
 test.plan(def.plan);
 
 test.ok(def.okay, 'ok()');
@@ -43,8 +43,4 @@ for (const [a,b] of def.isntJsonTests)
   test.isntJSON(a, b, msg);
 }
 
-// We're done, output the log.
-console.log(test.tap());
-
-// Re-expect the test.
-module.exports = test;
+test.done();
