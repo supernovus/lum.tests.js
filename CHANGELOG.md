@@ -11,6 +11,11 @@ and a reference to a property of a module will be in `@tests.propName` format.
 
 ## [Unreleased]
 
+## [1.7.1] - 2022-10-18
+### Changed
+- Bumped `@lumjs/core` to `1.7.1`.
+- Moved from custom lazy-loading to `ModuleBuilder`.
+
 ## [1.7.0] - 2022-09-29
 #### The *harness* update
 ### Added
