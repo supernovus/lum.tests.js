@@ -11,6 +11,12 @@ and a reference to a property of a module will be in `@tests.propName` format.
 
 ## [Unreleased]
 
+## [1.8.0] - 2023-01-06
+### Changed
+- Bumped `@lumjs/core` to `1.8.0`.
+- Moved away from `ModuleBuilder` which I've discontinued.
+- Changed how `@lumjs/core/modules` is loaded due to upstream changes.
+
 ## [1.7.1] - 2022-10-18
 ### Changed
 - Bumped `@lumjs/core` to `1.7.1`.
@@ -134,7 +140,9 @@ and a reference to a property of a module will be in `@tests.propName` format.
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.7.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.8.0...HEAD
+[1.8.0]: https://github.com/supernovus/lum.tests.js/compare/v1.7.1...v1.8.0
+[1.7.1]: https://github.com/supernovus/lum.tests.js/compare/v1.7.0...v1.7.1
 [1.7.0]: https://github.com/supernovus/lum.tests.js/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/supernovus/lum.tests.js/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/supernovus/lum.tests.js/compare/v1.4.0...v1.5.0
