@@ -1,5 +1,6 @@
 # TODO
 
+- Update to properly support `async` tests; the `harness` will need some work.
 - Write tests for:
   - `call()`
   - `diesWith()`
