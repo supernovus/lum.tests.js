@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/tests",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "bin":
   {
@@ -11,8 +11,11 @@
     ".": "./lib/index.js",
     "./test": "./lib/test/index.js",
     "./test/functional": "./lib/test/functional.js",
+    "./test/stats": "./lib/test/stats.js",
     "./harness": "./lib/harness/index.js",
     "./harness/parser": "./lib/harness/parser.js",
+    "./harness/plugin": "./lib/harness/plugin/index.js",
+    "./harness/plugin/node": "./lib/harness/plugin/node.js",
     "./package.json": "./package.json",
     "./data/*": "./test/data/*.js"
   },
@@ -24,7 +27,7 @@
   },
   "dependencies": 
   {
-    "@lumjs/core": "^1.8.0"
+    "@lumjs/core": "^1.26.0"
   },
   "scripts": {
     "test": "./bin/lumtest.js",

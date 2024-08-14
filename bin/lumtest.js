@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const process = require('node:process');
 const Harness = require('../lib/harness');
+const NodePlugin = require('../lib/harness/plugin/node');
 const core = require('@lumjs/core');
 const {S} = core.types;
 
@@ -59,7 +60,8 @@ for (const arg of args)
   }
 }
 
-const harness = new Harness(hOpts); // Create our Harness instance.
-module.exports = harness;           // Export it as the 'main' module.
-harness.addDir(aDir, aOpts);        // Add all the files in the test dir.
-harness.run(rPlan);                 // Run all the tests.
+// Create our Harness instance.
+const harness = new Harness(NodePlugin, hOpts); 
+module.exports = harness;     // Export it as the 'main' module.
+harness.addDir(aDir, aOpts);  // Add all the files in the test dir.
+harness.run(rPlan);           // Run all the tests.

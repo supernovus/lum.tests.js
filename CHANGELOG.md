@@ -11,6 +11,42 @@ and a reference to a property of a module will be in `@tests.propName` format.
 
 ## [Unreleased]
 
+## [2.0.0] - 2024-08-14
+### Added
+- The `Stats` class (and `Test` which extends it) now has async support.
+  - A new `.waiting` integer property indicates if async calls are in use.
+  - New `opts.async` nested options added to constructor options.
+  - The `async()` method takes an async function that returns a Promise,
+    increments the `.waiting` property, and then decrements it once the
+    returned Promise is either resolved or rejected.
+  - A `wait()` method is used by the `done()` method, and the Harness
+    to wait for all async calls to finish.
+- A new `registerGlobal` option for the `Harness` constructor that if `true`
+  will make it assign the instance to a special global variable.
+### Changed
+- The `Harness` constructor now requires a `Plugin` as a mandatory
+  parameter. No more auto-detection or other crufty magic.
+- The `bin/lumtest.js` script was updated with the API changes.
+- The `Plugin` constructor no longer takes the Harness instance as
+  a paramter. The `harness` property will be assigned directly by 
+  the harness instance instead.
+- `Plugin` class no longer extends the deprecated `core.AbstractClass`.
+- `Harness` has support for the new async functionality.
+  - The `run()` method is now explicitly `async`, as are its sub-methods.
+- Moved Harness Plugins into a `harness/plugin` sub-folder.
+- `Stats` can find the harness via the `registerGlobal` feature.
+  It still supports the CommonJS `require.main` method, but no
+  longer depends on it.
+- The `functional` module now supports using a different name
+  for the exported function than the underlying method. Useful
+  as the `async()` method is a reserved word and cannot be used
+  as a variable/function name (so it's renamed to `callAsync()`).
+- A bunch of extra modules are exported directly now.
+- Renamed some constructors for easier debugging.
+### Removed
+- The `harness/browser` plugin that I never implemented.
+  That's better done in a separate package.
+
 ## [1.9.0] - 2024-07-27
 ### Changed
 - Renamed `Harness` constructor name to `LumTestsHarness` to be more unique.
@@ -149,7 +185,8 @@ and a reference to a property of a module will be in `@tests.propName` format.
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v1.9.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/supernovus/lum.tests.js/compare/v1.9.0...v2.0.0
 [1.9.0]: https://github.com/supernovus/lum.tests.js/compare/v1.8.0...v1.9.0
 [1.8.0]: https://github.com/supernovus/lum.tests.js/compare/v1.7.1...v1.8.0
 [1.7.1]: https://github.com/supernovus/lum.tests.js/compare/v1.7.0...v1.7.1
