@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/tests",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "main": "lib/index.js",
   "bin":
   {
@@ -27,7 +27,7 @@
   },
   "dependencies": 
   {
-    "@lumjs/core": "^1.26.0"
+    "@lumjs/core": "^1.38.4"
   },
   "scripts": {
     "test": "./bin/lumtest.js",
