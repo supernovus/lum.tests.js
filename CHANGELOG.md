@@ -11,6 +11,25 @@ and a reference to a property of a module will be in `@tests.propName` format.
 
 ## [Unreleased]
 
+## [2.1.0] - 2025-11-26
+### Changed
+- Bumped core version to newest release with changes to _stringify_.
+- Updated `test/stats` to support new stringify API changes.
+- Updated `test/log` to use stringify from the test instance.
+- Changed how `harness/node` tests to see if a file should be used as a test.
+  - addDir() method now composes the Harness options with opts argument.
+  - A new `matchFiles` option can specify a custom function that will
+    be passed the file information object and the return value will be
+    used in a boolean context to determine if the file is a test or not.
+  - If specified, `matchFiles` will be used _instead of_ the `ext` option.
+  - The `ext` option now checks for `/`, `(` or `[` characters, 
+    which would indicate it is a RegExp pattern of some sort.
+    - `\.[cm]?js$` would match `.js`, `.cjs`, and `.mjs` files.
+    - `/\.js$/i` would match `.js`, `.JS`, `.Js`, and `.jS` files.
+  - If no special characters are found, the value is assumed to be
+    a single, case-sensitive file extension.
+  - The default is still `.js` if the `ext` option was not specified.
+
 ## [2.0.0] - 2024-08-14
 ### Added
 - The `Stats` class (and `Test` which extends it) now has async support.

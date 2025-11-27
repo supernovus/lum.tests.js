@@ -21,8 +21,6 @@ const aOpts =
   ext: '.js',
 }
 
-// TODO: a flag for specifying custom file tests.
-
 const flags =
 {
   '-d': v => aDir = v,
