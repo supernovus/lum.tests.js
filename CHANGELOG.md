@@ -11,6 +11,15 @@ and a reference to a property of a module will be in `@tests.propName` format.
 
 ## [Unreleased]
 
+## [2.1.1] - 2025-11-26
+### Fixed / Changed
+- The Harness (and `lumtest.js` script) can now handle ES Module test files.
+  Unlike CommonJS, you need to explicitly export the test instance!
+- I have marked this as requiring Node.js v22 or higher.
+  That is mostly due to how the `node` plugin works, as it currently uses 
+  `require()` for all test files regardless as to if they are CommonJS
+  or ES Modules, and that will explode on older Node.js versions.
+
 ## [2.1.0] - 2025-11-26
 ### Changed
 - Bumped core version to newest release with changes to _stringify_.
@@ -204,7 +213,9 @@ and a reference to a property of a module will be in `@tests.propName` format.
 - Ported from Lum.js v4 library set.
 - Added a few more features from the PHP version.
 
-[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.tests.js/compare/v2.1.1...HEAD
+[2.1.1]: https://github.com/supernovus/lum.tests.js/compare/v2.1.0...v2.1.1
+[2.1.0]: https://github.com/supernovus/lum.tests.js/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/supernovus/lum.tests.js/compare/v1.9.0...v2.0.0
 [1.9.0]: https://github.com/supernovus/lum.tests.js/compare/v1.8.0...v1.9.0
 [1.8.0]: https://github.com/supernovus/lum.tests.js/compare/v1.7.1...v1.8.0

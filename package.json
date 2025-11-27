@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/tests",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "main": "lib/index.js",
   "bin":
   {
@@ -30,12 +30,15 @@
     "@lumjs/core": "^1.38.4"
   },
   "scripts": {
-    "test": "./bin/lumtest.js",
+    "test": "./bin/lumtest.js -e '\\.[mc]?js$'",
     "build-docs": "jsdoc -c ./jsdoc.json",
     "build": "npm run build:grammar",
     "build:grammar": "./bin/build-grammar.sh tap"
   },
   "devDependencies": {
     "peggy": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }
