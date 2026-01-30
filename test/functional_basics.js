@@ -5,7 +5,7 @@ const
   plan,ok,pass,is,isnt,cmp,done,isJSON,isntJSON,lives,
 } = require('../lib').functional({module});
 const def = require('./inc/basics.js');
-const stringify = def.types.stringify;
+const {stringify} = def;
 
 plan(def.plan);
 

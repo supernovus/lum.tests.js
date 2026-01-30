@@ -1,6 +1,6 @@
 const Test = require('../lib').Test;
 const def = require('./inc/basics.js');
-const stringify = def.types.stringify;
+const {stringify} = def;
 
 const test = new Test({module});
 test.plan(def.plan);

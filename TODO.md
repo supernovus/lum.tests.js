@@ -1,5 +1,7 @@
 # TODO
 
+- Update the `peggy` package to the v5.x releases.
+
 - Write tests for:
   - `call()`
   - `diesWith()`

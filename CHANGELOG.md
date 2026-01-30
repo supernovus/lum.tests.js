@@ -11,6 +11,11 @@ and a reference to a property of a module will be in `@tests.propName` format.
 
 ## [Unreleased]
 
+## [2.2.0] - 2026-01-30
+### Changed
+- Updated to reflect several changes in `@lumjs/core` in regards to deprecated
+  functions, etc. There's more to do yet, but it's a start!
+
 ## [2.1.1] - 2025-11-26
 ### Fixed / Changed
 - The Harness (and `lumtest.js` script) can now handle ES Module test files.

@@ -1,5 +1,6 @@
 // Common stuff for both regular and functional tests.
 const types = require('@lumjs/core').types;
+const stringify = require('@lumjs/describe');
 
 const okay = (1==1);
 
@@ -68,5 +69,5 @@ const plan
 module.exports = 
 {
   isTests, isntTests, cmpTests, livesTests, isJsonTests, isntJsonTests,
-  okay, plan, types,
+  okay, plan, types, stringify,
 };

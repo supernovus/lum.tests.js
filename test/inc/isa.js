@@ -1,5 +1,6 @@
 // Common stuff for isa() and nota() tests.
 const types = require('@lumjs/core').types;
+const stringify = require('@lumjs/describe');
 // A quick reference to the type names.
 const TYP = types.TYPES;
 
@@ -104,7 +105,7 @@ function label (f,t)
 {
   return f+'('+((t.length === 3)
     ? t[2]
-    : types.stringify(t[0])+','+types.stringify(t[1]))+')';
+    : stringify(t[0])+','+stringify(t[1]))+')';
 }
 
 module.exports = {types, label, plan, isaTests, notaTests};
